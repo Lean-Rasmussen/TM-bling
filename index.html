@@ -5,26 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TM bling
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
-    <script src="src/angular.min.js"></script>
 
+<!-- setting up Less and CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    
+    
 
 
 </head>
 <body>
-    <header> TM bling place for css</header>
-    <ul class="navigation">
-        <li class="navigation__item">Parallax</li>
-        <li class="navigation__item">Buttons</li>
-        <li class="navigation__item">Animation</li>
-        <li class="navigation__item">SVG</li>
+    <header> 
+        <h2 class="header"> TM Bling</h2> 
+        <div class="navigation"></div>
+            <div class="navigation__btn">
+                    <span class="navigation__btn__span navigation__btn__span--1"></span>
+                    <span class="navigation__btn__span navigation__btn__span--2"></span>
+                    <span class="navigation__btn__span navigation__btn__span--3"></span>
+            </div>
+        </div>
+            <!---
+                <ul class="navigation__menu">
+                    <li class="navigation__menu__item">Parallax</li>
+                    <li class="navigation__menu__item">Buttons</li>
+                    <li class="navigation__menu__item">Animation</li>
+                    <li class="navigation__menu__item">SVG</li>
+                </ul>
+            -->
 
-    </ul>
-   
+
+    </header>
+    <div class="frontpage">
+        <div class="frontpage__container">
+            <h4>TM Bling</h4>
+            <p> This page is a mobile first website, for experiementing and explaning css, details.</p>
+            <p> Click in the navigation above to see the different effects.</p>
+        </div>
+        
+        <div class="frontpage__wave"></div>
+    </div>
+    
 </body>
-    <h1>TM-bling</h1>
-    <p> Click in the navigation above to see the different effects.</p>
 
+
+ <!--Setting up js anngular and Jquuery-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/angular.min.js"></script>
+    <script src="app.js"></script>
 </html>

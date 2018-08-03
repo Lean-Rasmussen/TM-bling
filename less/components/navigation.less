@@ -1,6 +1,76 @@
+header{
+    clear: both;
+    height: 10vh;
+    transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 100;
+    
+}
+.header{
+    width: 90%;
+    text-align: center;
+}
 .navigation{
     background-color: green;
-    &__item{
-        list-style: none;
-    }
+
+    &__btn{
+        margin-right: 5px;
+        margin-top: 5px;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 10px;
+        position: relative;
+        border: 2px solid rgb(0, 0, 0);
+        cursor: pointer;
+        transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
+
+        &:hover{
+            border: 2px solid rgb(255, 255, 255);
+
+            & span{
+                background-color:white;
+            }
+
+            }
+            &__span{
+                transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.4s;
+                position: absolute;
+                  width: 80%;
+                  height: 0.3rem;
+                  background-color:@black-dark;
+                  display: block;
+                  border-radius: 10px;
+                  left: 10%;
+    
+                  &--1{
+                    top:20%;
+                  }
+    
+                  &--2{
+                    top: 45%;
+                  }
+    
+                  &--3{
+                    bottom:20%;
+                  }
+                }
+                        
+              /*animation for when navigation is clicked 
+                The burger menu changes into an X symbol by rotating the spans
+                that make up the burger menu.
+              */
+        &--close &__span--1{
+            transform: rotate(45deg);
+            top: 49%;
+            }
+    
+        &--close &__span--2,
+        &--close &__span--3 {
+            transform: rotate(-45deg);
+            top:49%;
+        }
+    }    
 }
