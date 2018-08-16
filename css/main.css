@@ -63,74 +63,47 @@ body {
 header {
   width: 100%;
 }
-header {
-  clear: both;
-  height: 10vh;
-  transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.25);
+.navigation {
+  /* Btn and Checkbox checked with btn*/
+  /* Background and checked Nav + background */
+  /* Items and nav checked with items*/
 }
-.header {
-  width: 90%;
-  text-align: center;
+.navigation__checkbox {
+  opacity: 0;
 }
-.navigation__background {
-  background-image: linear-gradient(210deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  width: 2rem;
-  height: 2rem;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 100;
-  border-radius: 50%;
-  transform: scale(40);
-}
-.navigation__items {
-  position: absolute;
-  z-index: 150;
-  width: 80%;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.navigation__items__item {
-  list-style: none;
-  color: #ffffff;
-  border-radius: 1rem;
-  font-size: 2rem;
-  font-weight: 1000;
-  padding: 1rem 1.5rem;
-  text-transform: capitalize;
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 0.5s ease-in;
-}
-.navigation__items__item:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
+.navigation__checkbox,
 .navigation__btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
   margin-right: 5px;
   margin-top: 5px;
   height: 3rem;
   width: 3rem;
   border-radius: 10px;
-  position: relative;
   border: 2px solid #000000;
   cursor: pointer;
   transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
   z-index: 150;
-  /*animation for when navigation is clicked 
-                The burger menu changes into an X symbol by rotating the spans
-                that make up the burger menu.
-              */
 }
-.navigation__btn:hover {
-  border: 2px solid #ffffff;
+.navigation__btn {
+  z-index: 125;
 }
-.navigation__btn:hover span {
+.navigation__checkbox:checked ~ .navigation__btn {
+  border-color: white;
+}
+.navigation__checkbox:checked ~ .navigation__btn span {
+  transform: rotate(-45deg);
+  top: 49%;
+  background-color: white;
+}
+.navigation__checkbox:checked ~ .navigation__btn :last-child {
+  transform: rotate(45deg);
+}
+.navigation__checkbox:hover ~ .navigation__btn {
+  border-color: white;
+}
+.navigation__checkbox:hover ~ .navigation__btn span {
   background-color: white;
 }
 .navigation__btn__span {
@@ -152,14 +125,56 @@ header {
 .navigation__btn__span--3 {
   bottom: 20%;
 }
-.navigation__btn--close .navigation__btn__span--1 {
-  transform: rotate(45deg);
-  top: 49%;
+.navigation__background {
+  transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
+  background-image: linear-gradient(210deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+  border-radius: 50%;
 }
-.navigation__btn--close .navigation__btn__span--2,
-.navigation__btn--close .navigation__btn__span--3 {
-  transform: rotate(-45deg);
-  top: 49%;
+.navigation__checkbox:checked ~ .navigation__background {
+  background-image: linear-gradient(210deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  transform: scale(40);
+}
+.navigation__items {
+  position: absolute;
+  z-index: 125;
+  width: 0%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translateX(125vw);
+  transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
+}
+.navigation__items__item {
+  list-style: none;
+  color: #ffffff;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 1000;
+  padding: 0rem 0rem;
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.5s ease-in;
+}
+.navigation__items__item:hover {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+.navigation__checkbox:checked ~ .navigation__items {
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navigation__checkbox:checked ~ .navigation__items li {
+  padding: 1rem 1.5rem;
 }
 @keyframes waveAnimation {
   0% {
