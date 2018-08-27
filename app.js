@@ -1,8 +1,25 @@
-$(".navigation").click(function(){
-    $(".navigation__btn").toggleClass("navigation__btn--close")
-    $(".navigation").toggleClass("navigation--open")
+//module
+
+var TMbling= angular.module('TMbling',['ngRoute']);
+
+//controller
+
+TMbling.controller('navController',['$scope'],function($scope){
+
 })
 
-$(".navigation__bar").click(function(){
+//routes
+TMbling.config(function($routeProvider){
+
+    $routeProvider
+
+    .when('/',{
+        templateURL: 'pages/home.htm',
+        controller:'homeController'
+    })
+    .when('/parallax',{
+        templateURL: 'pages/parallax.htm',
+        controller: 'parallaxController'
+    })
 
 })

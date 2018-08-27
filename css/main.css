@@ -5,12 +5,14 @@ body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  position: relative;
 }
 .frontpage {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(225, 255, 255, 0.2)), url(../../css/img/forest1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
   color: white;
   text-align: center;
   font-size: 1.2rem;
@@ -56,6 +58,59 @@ body {
     transform: translate(-50%, -75%) rotate(360deg);
   }
 }
+.parallax__basic__picture {
+  top: 0;
+  height: 80vh;
+  width: 100vw;
+  background-image: url("../../css/img/sunset.jpeg");
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.parallax__basic__description {
+  width: 80%;
+  margin: auto;
+  padding: 2vh;
+  text-align: center;
+  background: transparent;
+}
+.parallax__periscope {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.parallax__periscope__image {
+  min-height: 50vh;
+  max-width: 80%;
+  margin: auto;
+  background-image: url("../../css/img/periscope.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 50%;
+  background-size: 50% 100%;
+  margin-top: 10%;
+  border: 2px solid black;
+}
+.bottom {
+  height: 800px;
+}
+.parallax-advanced {
+  width: 100%;
+}
+.parallax-advanced__background {
+  position: relative;
+  height: 600px;
+  background-image: url("../../css/img/beachparallax.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.parallax-advanced__textbox {
+  text-align: center;
+}
 body {
   display: flex;
   flex-flow: row wrap;
@@ -73,7 +128,7 @@ header {
 }
 .navigation__checkbox,
 .navigation__btn {
-  position: absolute;
+  position: fixed;
   top: 0.5rem;
   right: 0.5rem;
   margin-right: 5px;
@@ -111,7 +166,7 @@ header {
   position: absolute;
   width: 80%;
   height: 0.3rem;
-  background-color: #222;
+  background-color: black;
   display: block;
   border-radius: 10px;
   left: 10%;
@@ -128,34 +183,36 @@ header {
 .navigation__background {
   transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
   background-image: linear-gradient(210deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  clip-path: circle(115% at 100% 0%);
   width: 2rem;
   height: 2rem;
   position: fixed;
-  right: 10px;
-  top: 10px;
+  right: 0px;
+  top: 0px;
   z-index: 100;
-  border-radius: 50%;
 }
 .navigation__checkbox:checked ~ .navigation__background {
   background-image: linear-gradient(210deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  transform: scale(40);
+  width: 100vW;
+  height: 100vh;
 }
 .navigation__items {
-  position: absolute;
+  overflow: hidden;
+  position: fixed;
   z-index: 125;
-  width: 0%;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transform: translateX(125vw);
+  width: 0;
+  transform: translateX(50vw);
   transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
 }
 .navigation__items__item {
   list-style: none;
   color: #ffffff;
   border-radius: 1rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 1000;
   padding: 0rem 0rem;
   text-transform: capitalize;

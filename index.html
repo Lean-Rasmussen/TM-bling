@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TMbling">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,51 +15,45 @@
 
 </head>
 <body>
-        <input type="checkbox" class=" navigation__checkbox">
-        <div class="navigation__btn">
-                <span class="navigation__btn__span navigation__btn__span--1"></span>
-                <span class="navigation__btn__span navigation__btn__span--2"></span>
-                <span class="navigation__btn__span navigation__btn__span--3"></span>
-        </div>
-
-
-        <div class="navigation__items">
-            <ul>
-                <li class="navigation__items__item">Parallax scrolling</li>
-                <li class="navigation__items__item">thing 2</li>
-                <li class="navigation__items__item">thing 3</li>
-                <li class="navigation__items__item">thing 4</li>
-            </ul>
-        </div>
-
-        <div class="navigation__background">
-        </div>
-        </div>
-            <!---
-                <ul class="navigation__menu">
-                    <li class="navigation__menu__item">Parallax</li>
-                    <li class="navigation__menu__item">Buttons</li>
-                    <li class="navigation__menu__item">Animation</li>
-                    <li class="navigation__menu__item">SVG</li>
-                </ul>
-            -->
-    <div class="frontpage">
-        <div class="frontpage__container">
-            <h4>TM Bling</h4>
-            <p> This page is a mobile first website, for experiementing and explaning css, details.</p>
-            <p> Click in the navigation above to see the different effects.</p>
-        </div>
-        
-        <div class="frontpage__wave"></div>
+    <input type="checkbox" class=" navigation__checkbox">
+    <div class="navigation__btn">
+            <span class="navigation__btn__span navigation__btn__span--1"></span>
+            <span class="navigation__btn__span navigation__btn__span--2"></span>
+            <span class="navigation__btn__span navigation__btn__span--3"></span>
     </div>
-    
+
+
+    <div class="navigation__items">
+        <ul>
+            <li class="navigation__items__item"><a href="#/parallax">Basis parallax scroll</a></li>
+            <li class="navigation__items__item">Advanced parallax scroll</li>
+            <li class="navigation__items__item">thing 3</li>
+            <li class="navigation__items__item">thing 4</li>
+        </ul>
+    </div>
+
+    <div class="navigation__background"> </div>
+    <div class="parallax-advanced">
+        <div class="parallax-advanced__background">
+
+        </div>
+        <div class="parallax-advanced__textbox">
+            <h3> Adjusted parallax effect</h3>
+            <p></p>
+        </div>
+    </div>
 </body>
 
 
  <!--Setting up js anngular and Jquuery-->
 
 
+    <!-- jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="src/angular.min.js"></script>
+     <!-- angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <!-- angular route-->
+    <script src="https://code.angularjs.org/1.7.2/angular-route.min.js"></script>
+    
     <script src="app.js"></script>
 </html>
