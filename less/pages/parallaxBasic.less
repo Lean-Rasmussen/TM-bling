@@ -13,7 +13,7 @@
 
         }
         &__description{
-            width: 80%;
+            width: @width;
             margin: auto;
             padding: 2vh;
             text-align: center;
@@ -36,11 +36,12 @@
             background-size: 50% 100%;
             margin-top: 10%;
             border: 2px solid black;
-
-
         }
     }
 }
 .bottom{
-    height: 800px;
+    //this is set to width since the height gives bad effects on narrow
+    //scrrens but on landscape the extraspace does not hurt
+    height: 12.5vw;
+
 }

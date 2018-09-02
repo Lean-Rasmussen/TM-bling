@@ -10,14 +10,25 @@
     font-size: 1.2rem;
     overflow: hidden;
     &__container{
-        margin-top: 15vh;
+        padding-top: 10vh;
+        width: @width;
+        text-align: center;
+        margin: auto;
 
+        & > h2{
+            padding-bottom: 2.5rem;
+        }
     }
 
     &__wave{
         position: relative;
-        width: 150%;
+        width: 110vh;
+
+        //this varriable should get larger when screen size increases 
+        //to keep the waves at the bottom of the screen it should be
+        //relative to height and width poportion
         height: 150%;
+        
         border-radius: 25%;
         &:before,
         &:after{

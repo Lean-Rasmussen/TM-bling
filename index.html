@@ -23,24 +23,20 @@
     </div>
 
 
-    <div class="navigation__items">
+    <div class="navigation__items" ng-controller='navController'>
         <ul>
-            <li class="navigation__items__item"><a href="#/parallax">Basis parallax scroll</a></li>
-            <li class="navigation__items__item">Advanced parallax scroll</li>
-            <li class="navigation__items__item">thing 3</li>
-            <li class="navigation__items__item">thing 4</li>
+            <li class="navigation__items__item"><a href="#/">home</a></li>
+            <li class="navigation__items__item"><a href="/#!/parallax">Basis parallax scroll</a></li>
+            <li class="navigation__items__item"><a href="/#!/advancedParallax">Advanced parallax scroll</a></li>
+            <li class="navigation__items__item"><a href="/#!/SVG">SVG</a></li>
         </ul>
     </div>
 
     <div class="navigation__background"> </div>
-    <div class="parallax-advanced">
-        <div class="parallax-advanced__background">
+    <div class="container">
+            <div ng-view>
 
-        </div>
-        <div class="parallax-advanced__textbox">
-            <h3> Adjusted parallax effect</h3>
-            <p></p>
-        </div>
+            </div>
     </div>
 </body>
 
